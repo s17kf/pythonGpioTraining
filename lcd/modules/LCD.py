@@ -51,13 +51,14 @@ class LCD(threading.Thread):
                         self.lcd.clear()
                         for i in range(self.rows):
                             self.lcd.set_cursor(0, i)
-                            self.lcd.message(self.lines(i))
+                            self.lcd.message(self.lines[i])
                     else:
                         for i in range(self.scroll):
                             self.lcd.move_left
-                        for line in self.lines:
-                            if len(line) > self.max_size:
-                                self.max_size = len(line)
+                    self.max_size = 0
+                    for line in self.lines:
+                        if len(line) > self.max_size:
+                            self.max_size = len(line)
                         self.lcd.set_cursor(0, new_item[0])
                         self.lcd.message(new_item[1])
                     self.scroll = 0
