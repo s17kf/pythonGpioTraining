@@ -55,10 +55,10 @@ last_action_time = time.time()
 button_presses = 0
 sleep_time = 6
 while True:
-    button_states = wakeupButton.getChange()
-    if button_states[0]:
+    button_state, button_last = wakeupButton.getChange()
+    if button_state:
         last_action_time = time.time()
-        if not button_states[1]:
+        if not button_last:
             lcd.turnOn()
 #            button_presses += 1
 #            lcd.setLine(0, 'button pressed: ' + str(button_presses) + 'times')

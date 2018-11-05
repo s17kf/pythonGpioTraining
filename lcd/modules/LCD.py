@@ -119,7 +119,8 @@ class LCD(threading.Thread):
     def moveRight(self):
         self.lcd.move_right()
 
-
+    def clear(self):
+        self.lcd.clear()
 
 
 

@@ -15,4 +15,4 @@ class BUTTON():
     def getChange(self):    #returns actual state and state when last checked state [actualState, lastCheckedState]
         last_state = self.last_state
         self.getState()
-        return [self.last_state, last_state]
+        return (self.last_state, last_state)
