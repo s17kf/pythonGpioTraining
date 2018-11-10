@@ -16,3 +16,10 @@ class BUTTON():
         last_state = self.last_state
         self.getState()
         return (self.last_state, last_state)
+
+    def isPressed(self):
+        actual_state, last_state = self.getChange()
+        if actual_state:
+            if not last_state:
+                return True
+        return False

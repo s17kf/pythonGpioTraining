@@ -11,7 +11,7 @@ lcd_d5 = 17
 lcd_d6 = 21
 lcd_d7 = 22
 lcd_backlight = 4
-button_pin = 19
+button_pin = 20 
 dht_pin = 26
 
 lcd_columns = 16
